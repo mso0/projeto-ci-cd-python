@@ -11,6 +11,7 @@ def listar():
         for n in nome:
             print(n)
 
+# função para remover
 def remover():
     nome.remove(input('digite seu nome de remoção: '))
 
