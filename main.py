@@ -1,16 +1,16 @@
 def cadastro():
-    nome.append(input('digite seu nome '))
+    nome.append(input('digite seu nome: '))
 
 def listar():
     if len(nome) == 0:
         print('lista de nomes vazia')
     else:
-        print('lista de nomes')
+        print('lista de nomes ')
         for n in nome:
             print(n)
 
 def remover():
-    nome.remove(input('digite seu nome de remoção '))
+    nome.remove(input('digite seu nome de remoção: '))
 
 nome={}
 
