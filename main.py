@@ -2,6 +2,7 @@
 def cadastro():
     nome.append(input('digite seu nome: '))
 
+# função para cadastrar listar
 def listar():
     if len(nome) == 0:
         print('lista de nomes vazia')
