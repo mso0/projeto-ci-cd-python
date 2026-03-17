@@ -1,3 +1,4 @@
+# função para cadastrar alunos
 def cadastro():
     nome.append(input('digite seu nome: '))
 
