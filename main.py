@@ -15,6 +15,7 @@ def remover():
 nome={}
 
 while True:
+    print("=== MENU ===")
     print('opção 1 para cadastrar nome')
     print('opção 2 ver nomes')
     print('opção 3 remover nome')
