@@ -1,20 +1,24 @@
+# função para cadastrar alunos
 def cadastro():
-    nome.append(input('digite seu nome '))
+    nome.append(input('digite seu nome: '))
 
+# função para cadastrar listar
 def listar():
     if len(nome) == 0:
         print('lista de nomes vazia')
     else:
-        print('lista de nomes')
+        print('lista de nomes ')
         for n in nome:
             print(n)
 
+# função para remover
 def remover():
-    nome.remove(input('digite seu nome de remoção '))
+    nome.remove(input('digite seu nome de remoção: '))
 
 nome={}
 
 while True:
+    print("=== MENU ===")
     print('opção 1 para cadastrar nome')
     print('opção 2 ver nomes')
     print('opção 3 remover nome')
