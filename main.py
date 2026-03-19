@@ -2,42 +2,58 @@
 def cadastro():
     nome.append(input('digite seu nome: '))
 
-# função para cadastrar listar
+
+# função para listar
 def listar():
     if len(nome) == 0:
         print('lista de nomes vazia')
     else:
-        print('lista de nomes ')
+        print('lista de nomes')
         for n in nome:
             print(n)
 
+
 # função para remover
 def remover():
-    nome.remove(input('digite seu nome de remoção: '))
+    nome_remover = input('digite seu nome de remoção: ')
 
-nome={}
-
-while True:
-    print("=== MENU ===")
-    print('opção 1 para cadastrar nome')
-    print('opção 2 ver nomes')
-    print('opção 3 remover nome')
-    print('opção 4 sair do programa')
-
-    opcao = input('digite sua escolha ')
-
-    if opcao=='1':
-        cadastro()
-
-    elif opcao=='2':
-        listar()
-
-    elif opcao=='3':
-        remover()
-
-    elif opcao=='4':
-        print('sair do programa')
-        break
-
+    if nome_remover in nome:
+        nome.remove(nome_remover)
+        print('nome removido')
     else:
-         print('opção invalida')
+        print('nome não encontrado')
+
+
+nome = []
+
+
+def main():
+    while True:
+        print("=== MENU ===")
+        print('opção 1 para cadastrar nome')
+        print('opção 2 ver nomes')
+        print('opção 3 remover nome')
+        print('opção 4 sair do programa')
+
+        opcao = input('digite sua escolha ')
+
+        if opcao == '1':
+            cadastro()
+
+        elif opcao == '2':
+            listar()
+
+        elif opcao == '3':
+            remover()
+
+        elif opcao == '4':
+            print('sair do programa')
+            break
+
+        else:
+            print('opção invalida')
+
+
+if __name__ == "__main__":
+    print("Sistema funcionando corretamente")
+    # main()
