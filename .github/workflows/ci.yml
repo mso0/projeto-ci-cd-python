@@ -19,8 +19,11 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Rodar script
-      run: python main.py
+    - name: Instalar pytest
+      run: pip install pytest
+
+    - name: Rodar testes
+      run: pytest
 
     - name: Notificar no Discord
       if: always()
