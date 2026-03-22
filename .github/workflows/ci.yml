@@ -21,3 +21,10 @@ jobs:
 
     - name: Rodar script
       run: python main.py
+
+    - name: Notificar no Discord
+      if: always()
+      run: |
+        curl -H "Content-Type: application/json" \
+        -d "{\"content\": \"🚀 CI executado com status: ${{ job.status }}\"}" \
+        ${{ secrets.DISCORD_WEBHOOK }}
