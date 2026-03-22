@@ -27,3 +27,6 @@ def test_divisao():
 
 def test_divisao_por_zero():
     assert divisao(10, 0) is None
+
+def test_extra():
+    assert 1 == 1
