@@ -25,6 +25,7 @@ jobs:
     - name: Notificar no Discord
       if: always()
       run: |
-        curl -H "Content-Type: application/json" \
-        -d "{\"content\": \"🚀 CI executado com status: ${{ job.status }}\"}" \
+        curl -X POST -H "Content-Type: application/json" \
+        -d '{"content": "🚀 CI executado com status: ${{ job.status }}"}' \
         ${{ secrets.DISCORD_WEBHOOK }}
+        
